@@ -42,29 +42,34 @@ export default function Providers({ children }) {
     },
   };
 
+  var wallets = [keplrWallets[0], leapWallets[0]];
+  var walletConnectOptions = null;
+
+  if (WALLET_CONNECT_ID && WALLET_CONNECT_ID !== "") {
+    //Only adding mobile wallets if wallet conenct id is set so we dont errror
+    wallets.push(keplrWallets[1]);
+    wallets.push(leapWallets[1]);
+    walletConnectOptions = {
+      signClient: {
+        projectId: WALLET_CONNECT_ID,
+        relayUrl: "wss://relay.walletconnect.org",
+        metadata: {
+          name: META.title,
+          description: META.description,
+          url: META.url,
+          icons: [META.logo],
+        },
+      },
+    };
+  }
+
   return (
     <ChainProvider
       chains={[selectedChain]}
       assetLists={assets}
-      wallets={[
-        keplrWallets[0],
-        keplrWallets[1], //Keplr Mobile
-        leapWallets[0],
-        leapWallets[1], //Leap Mobile
-      ]}
+      wallets={wallets}
       signerOptions={signerOptions}
-      walletConnectOptions={{
-        signClient: {
-          projectId: WALLET_CONNECT_ID,
-          relayUrl: "wss://relay.walletconnect.org",
-          metadata: {
-            name: META.title,
-            description: META.description,
-            url: META.url,
-            icons: [META.logo],
-          },
-        },
-      }}
+      walletConnectOptions={walletConnectOptions}
       endpointOptions={{
         endpoints: {
           neutron: {

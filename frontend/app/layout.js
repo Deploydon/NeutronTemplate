@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Providers from "./Providers";
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 import { META } from "@/config";
 const geistSans = Geist({
@@ -41,8 +42,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <link rel="manifest" href="/site.webmanifest" />
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>{children}</Providers>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-500`}>
+        <Providers>
+          <NavBar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
