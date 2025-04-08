@@ -36,3 +36,22 @@ Compiling:
 cd contract
 ./buildprod.sh
 ```
+
+
+The contract has a JS folder which is from the [LocalTesting](https://github.com/Deploydon/LocalTesting/) package. It is pre-configured to interact with this contract. It is currently configured for the Neutron Pion-1 Testnet. Create and fund a new seed phrase and update the env. The example env has a pre-loaded seedphrase for CosmoPark. If you want to test locally, refer to the Neutron Cosmopark docs: [https://docs.neutron.org/1.0/neutron/build-and-run/cosmopark/](https://docs.neutron.org/1.0/neutron/build-and-run/cosmopark/)
+
+
+```
+node deploy.js
+node migrate.js
+node exec.js
+node query.js
+```
+
+
+Pion-1 Contract Address:
+```
+neutron1n9xk0jk2pznv085yevpg778kxqeq3scm6yhy332jk9cmteqlv0as5gl6p8
+```
+
+[View On Celatone](https://neutron.celat.one/pion-1/contracts/neutron1n9xk0jk2pznv085yevpg778kxqeq3scm6yhy332jk9cmteqlv0as5gl6p8)

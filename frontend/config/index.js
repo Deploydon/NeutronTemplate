@@ -14,4 +14,4 @@ export const META = {
 export const WALLET_CONNECT_ID = "";
 
 
-export const CONTRACT = ""; //deployed test contract
+export const CONTRACT = "neutron1n9xk0jk2pznv085yevpg778kxqeq3scm6yhy332jk9cmteqlv0as5gl6p8"; //deployed test contract

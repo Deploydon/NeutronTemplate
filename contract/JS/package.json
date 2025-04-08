@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@cosmjs/cosmwasm-stargate": "^0.32.3",
+    "@cosmjs/stargate": "^0.32.3",
+    "dotenv": "^16.4.5"
+  }
+}
