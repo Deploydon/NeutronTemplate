@@ -12,3 +12,6 @@ export const META = {
 
 //For using mobile wallet connect. Get from: https://cloud.reown.com/
 export const WALLET_CONNECT_ID = "";
+
+
+export const CONTRACT = ""; //deployed test contract
