@@ -1,22 +1,25 @@
 # Neutron Template
 
-(Readme in progress)
+(Readme Pending)
+
 
 This repo aims to be a base starting point for building NextJS apps that interact with Neutron.
 
 View it live here: [https://NeutronTemplate.Deploydon.com](https://NeutronTemplate.Deploydon.com)
 
 
+
+
 What it includes:
 - NextJS 15 with Tailwind.
 - [CosmosKit](https://github.com/cosmology-tech/cosmos-kit) - For wallet connecting. Defaults to enabling Keplr/Leap with placeholders for enabling mobile after getting a [Reown/WalletConnect](https://cloud.reown.com/) Project Key 
 - [Tanstack](https://github.com/TanStack/query) - For hooks to make caching and fetching chain data much easier
+- Complete Cosmwasm contract you can build/deploy on your own for the frontend to interact with.
 
 
 Frontend Features:
 - Connecting wallet
-- Hooks to fetch users wallet balance of varying assets
- 
+- Hooks to fetch users wallet balance, contract states, etc
 
 Running the front end:
 
