@@ -1,7 +1,8 @@
-export const CHAIN_NAME = "neutron";
+export const CHAIN_NAME = "neutrontestnet";
 export const CHAIN_ID = "neutron-1";
 export const RPC = "https://rpc-falcron.pion-1.ntrn.tech";
 export const BASE_DENOM = "untrn";
+export const GAS_PRICE = "0.005";
 
 export const META = {
   title: "Neutron Template",

@@ -8,6 +8,7 @@ import { wallets as leapWallets } from "@cosmos-kit/leap";
 import { chains, assets } from "chain-registry";
 import { GasPrice } from "@cosmjs/stargate";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { Toaster } from "react-hot-toast";
 
 import { CHAIN_NAME, RPC, WALLET_CONNECT_ID, META } from "@/config";
 const selectedChain = chains.find((chain) => chain.chain_name === CHAIN_NAME);
@@ -70,9 +71,9 @@ export default function Providers({ children }) {
       wallets={wallets}
       signerOptions={signerOptions}
       walletConnectOptions={walletConnectOptions}
-      endpointOptions={{
+          endpointOptions={{
         endpoints: {
-          neutron: {
+          neutrontestnet: {
             rpc: [RPC],
           },
         },
@@ -80,6 +81,7 @@ export default function Providers({ children }) {
       allowedIframeParentOrigins={["https://daodao.zone"]}
     >
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+      <Toaster position="top-center" toastOptions={{ className: "font-poppins" }} />
     </ChainProvider>
   );
 }
