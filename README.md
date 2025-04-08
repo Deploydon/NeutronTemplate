@@ -3,11 +3,9 @@
 (Readme Pending)
 
 
-This repo aims to be a base starting point for building NextJS apps that interact with Neutron.
+This repo aims to be a base starting point for building NextJS apps that interact with Neutron. It is essentially what I use for everything I build, generally copying the base structure between projects. It has evolved/improved over time. I finally took the time to mash together the core into a shareable repo. 
 
 View it live here: [https://NeutronTemplate.Deploydon.com](https://NeutronTemplate.Deploydon.com)
-
-
 
 
 What it includes:
@@ -17,9 +15,18 @@ What it includes:
 - Complete Cosmwasm contract you can build/deploy on your own for the frontend to interact with.
 
 
+The sample contract has a few execute/query functions:
+- Users can increment a value stored in their state
+- Users can deposit / withdraw NTRN. Stored in their state
+- Users can increment a global counter
+- Only the admin can reset the global counter
+
+
+
 Frontend Features:
 - Connecting wallet
 - Hooks to fetch users wallet balance, contract states, etc
+- Full UI for incrementing users value, global value and depositing/withdrawing.
 
 Running the front end:
 

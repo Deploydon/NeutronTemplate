@@ -6,6 +6,7 @@ import { useUserBalance, useUser } from "@/hooks";
 import DepositCard from "@/components/DepositCard";
 import UserCounter from "@/components/UserCounter";
 import GlobalCounter from "@/components/UseGlobalCounter";
+import UserList from "@/components/UserList";
 
 export default function Home() {
   const { status, address } = useChain(CHAIN_NAME);
@@ -56,6 +57,9 @@ export default function Home() {
             <p className="text-gray-300">Please connect your wallet to continue.</p>
           </div>
         )}
+        <div className="mt-4">
+          <UserList />
+        </div>
       </div>
     </div>
   );
