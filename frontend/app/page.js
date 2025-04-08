@@ -2,7 +2,7 @@
 import GithubStarButton from "@/components/GithubStarButton";
 import { CHAIN_NAME, BASE_DENOM } from "@/config";
 import { useChain } from "@cosmos-kit/react";
-import { useUserBalance, useConfig, useGlobal, useUser } from "@/hooks";
+import { useUserBalance, useUser } from "@/hooks";
 import DepositCard from "@/components/DepositCard";
 import UserCounter from "@/components/UserCounter";
 import GlobalCounter from "@/components/UseGlobalCounter";
