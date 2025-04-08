@@ -1,0 +1,26 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@cosmos-kit/keplr": "^2.15.0",
+    "@cosmos-kit/leap": "^2.15.0",
+    "@cosmos-kit/react": "^2.22.0",
+    "@tanstack/react-query": "^5.72.1",
+    "chain-registry": "^1.69.177",
+    "next": "^15.2.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.3",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.3"
+  }
+}
