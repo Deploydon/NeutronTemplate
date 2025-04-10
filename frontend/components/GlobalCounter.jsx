@@ -36,7 +36,7 @@ export default function GlobalCounter() {
     <div className="bg-gray-800 p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-gray-200 mb-4">Global Counter</h2>
       <div className="flex flex-col items-center">
-        <div className="text-5xl font-bold text-purple-400 mb-4">{globalQuery.isLoading ? <span className="animate-pulse">Loading...</span> : global?.counter || 0}</div>
+        <div className="text-5xl font-bold text-blue-400 mb-4">{globalQuery.isLoading ? <span className="animate-pulse">Loading...</span> : global?.counter || 0}</div>
         <div className="text-gray-400 mb-4 text-center text-sm">
           <p className="italic">Anyone can increment this counter</p>
           {global?.last_user && (
@@ -50,7 +50,7 @@ export default function GlobalCounter() {
           onClick={incrementGlobal}
           disabled={incrementGlobalCounter.isPending}
           className={`${
-            incrementGlobalCounter.isPending ? "bg-purple-400 cursor-not-allowed" : "bg-purple-600 hover:bg-purple-700 hover:scale-105"
+            incrementGlobalCounter.isPending ? "bg-blue-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700 hover:scale-105"
           } text-white font-bold py-2 px-6 rounded-full transition duration-200 ease-in-out transform mb-3`}
         >
           {incrementGlobalCounter.isPending ? "Pending..." : "Increment Global Counter"}
