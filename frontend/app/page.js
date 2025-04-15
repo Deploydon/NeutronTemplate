@@ -5,7 +5,7 @@ import { useChain } from "@cosmos-kit/react";
 import { useUserBalance, useUser } from "@/hooks";
 import DepositCard from "@/components/DepositCard";
 import UserCounter from "@/components/UserCounter";
-import GlobalCounter from "@/components/UseGlobalCounter";
+import GlobalCounter from "@/components/GlobalCounter";
 import UserList from "@/components/UserList";
 
 export default function Home() {
