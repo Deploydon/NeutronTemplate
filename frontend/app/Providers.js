@@ -71,7 +71,7 @@ export default function Providers({ children }) {
       wallets={wallets}
       signerOptions={signerOptions}
       walletConnectOptions={walletConnectOptions}
-          endpointOptions={{
+      endpointOptions={{
         endpoints: {
           neutrontestnet: {
             rpc: [RPC],
@@ -79,6 +79,14 @@ export default function Providers({ children }) {
         },
       }}
       allowedIframeParentOrigins={["https://daodao.zone"]}
+      sessionOptions={{
+        duration: 15 * 24 * 60 * 60 * 1000,
+        callback: () => {
+          console.log("SESSION DONE, DISCONNECTING WALLETS");
+          wallets.forEach((w) => w.disconnectAll(false));
+          window?.localStorage.removeItem("cosmos-kit@2:core//current-wallet");
+        },
+      }}
     >
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
       <Toaster position="top-center" toastOptions={{ className: "font-poppins" }} />
